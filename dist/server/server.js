@@ -12,6 +12,10 @@ var _dotenv = require('dotenv');
 
 var _dotenv2 = _interopRequireDefault(_dotenv);
 
+var _route = require('./route');
+
+var _route2 = _interopRequireDefault(_route);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _dotenv2.default.config();
@@ -28,6 +32,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use(_express2.default.json());
 app.use(_express2.default.urlencoded({ extended: false }));
+app.use('/api/v1/', _route2.default);
 
 app.listen(port);
 console.log('App running on ' + port);
