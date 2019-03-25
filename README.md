@@ -1,6 +1,9 @@
 # SMS_API
 This is a basic API built to facilitate sending and receiving of sms by users.
 
+# API DOCS
+This is the link to the [API docs](https://documenter.getpostman.com/view/4919704/S17tPnP6)
+
 ## Features
 - Create contacts
 - Retrieve all contacts
