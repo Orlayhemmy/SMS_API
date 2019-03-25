@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import route from './route';
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use('/api/v1/', route);
 
 app.listen(port);
 console.log(`App running on ${port}`);
